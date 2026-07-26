@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>DETERMINATION</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom titlebar (frame:false in main.js) -->
+  <div class="titlebar" id="drag-region">
+    <div class="titlebar-brand">
+      <svg class="soul-icon" viewBox="0 0 16 16" width="14" height="14">
+        <path d="M8 14 L2 8 A4 4 0 0 1 8 3 A4 4 0 0 1 14 8 Z" />
+      </svg>
+      <span class="brand-text">DETERMINATION</span>
+    </div>
+
+    <div class="theme-picker" id="theme-picker" title="Choose your SOUL trait">
+      <button class="soul-dot" data-theme="determination" style="--dot:#FF0000" aria-label="Determination"></button>
+      <button class="soul-dot" data-theme="patience"      style="--dot:#00E5FF" aria-label="Patience"></button>
+      <button class="soul-dot" data-theme="integrity"     style="--dot:#3E6BFF" aria-label="Integrity"></button>
+      <button class="soul-dot" data-theme="perseverance"  style="--dot:#9B30FF" aria-label="Perseverance"></button>
+      <button class="soul-dot" data-theme="kindness"      style="--dot:#39FF6A" aria-label="Kindness"></button>
+      <button class="soul-dot" data-theme="bravery"       style="--dot:#FF8A00" aria-label="Bravery"></button>
+      <button class="soul-dot" data-theme="justice"       style="--dot:#FFEA00" aria-label="Justice"></button>
+    </div>
+
+    <div class="window-controls">
+      <button id="win-min" class="win-btn" aria-label="Minimize">_</button>
+      <button id="win-max" class="win-btn" aria-label="Maximize">□</button>
+      <button id="win-close" class="win-btn win-close" aria-label="Close">X</button>
+    </div>
+  </div>
+
+  <!-- Tab strip -->
+  <div class="tab-strip">
+    <div class="tabs" id="tabs"></div>
+    <button class="new-tab-btn" id="new-tab-btn" aria-label="New tab">+</button>
+  </div>
+
+  <!-- Navigation / address bar -->
+  <div class="nav-bar">
+    <button class="nav-btn" id="btn-back" aria-label="Back">&#8592;</button>
+    <button class="nav-btn" id="btn-forward" aria-label="Forward">&#8594;</button>
+    <button class="nav-btn" id="btn-reload" aria-label="Reload">&#8635;</button>
+
+    <div class="address-box">
+      <span class="address-caret">*</span>
+      <input id="address-input" class="address-input" type="text" spellcheck="false"
+             placeholder="Where will you go?" />
+    </div>
+
+    <button class="nav-btn go-btn" id="btn-go" aria-label="Go">GO</button>
+  </div>
+
+  <!-- Flavor text line, Undertale-style narration box -->
+  <div class="flavor-bar" id="flavor-bar">* Your journey begins.</div>
+
+  <!-- Webview host -->
+  <div class="view-host" id="view-host"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
