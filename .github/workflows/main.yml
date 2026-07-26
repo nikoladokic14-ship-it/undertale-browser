@@ -1,1 +1,2 @@
 name: Build Installers
+.github/workflows/build.yml
